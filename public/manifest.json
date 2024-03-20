@@ -1,0 +1,8 @@
+{
+  "name": "hype",
+  "short_name": "hype",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "scope": "/"
+}
