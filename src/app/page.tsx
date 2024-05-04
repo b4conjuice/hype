@@ -1,3 +1,5 @@
+import { unstable_noStore as noStore } from 'next/cache'
+
 import Main from '@/app/_components/main'
 import Markdown from '@/app/_components/markdown'
 import fetcher from '@/lib/fetcher'
@@ -7,9 +9,8 @@ type Content = {
   markdown: string
 }
 
-export const dynamic = 'force-dynamic'
-
 export default async function Home() {
+  noStore()
   const data: Content = await fetcher(process.env.CONTENT_URL!)
   const content = sanitize(data.markdown)
   return (
