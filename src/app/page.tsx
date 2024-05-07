@@ -14,7 +14,7 @@ export default async function Home() {
   const data: Content = await fetcher(process.env.CONTENT_URL!)
   const content = sanitize(data.markdown)
   return (
-    <Main className='flex flex-col p-4'>
+    <Main className='flex flex-col md:p-4'>
       <div className='flex flex-grow flex-col items-center justify-center space-y-4'>
         <Markdown content={content} />
       </div>
